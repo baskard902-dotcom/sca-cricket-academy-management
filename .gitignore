@@ -1,0 +1,38 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Production build outputs
+dist/
+build/
+coverage/
+
+# Environment variables & secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+!.env.example
+
+# OS / Editor / Harness
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.antigravity/
+.aistudio/
+
+# Local test & cloud stores
+.drive_simulated/
+data/google_drive_cloud/
+data/safety_backups/
+scratch/

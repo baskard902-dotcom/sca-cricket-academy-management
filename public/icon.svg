@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+    <linearGradient id="ballGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444" />
+      <stop offset="50%" stop-color="#DC2626" />
+      <stop offset="100%" stop-color="#991B1B" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D" />
+      <stop offset="50%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Shield / Rounded Squircle -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <!-- Outer Ring Accent -->
+  <rect x="16" y="16" width="480" height="480" rx="96" fill="none" stroke="url(#goldGrad)" stroke-width="6" opacity="0.4" />
+
+  <!-- Crossed Cricket Bats -->
+  <g transform="translate(256, 230)">
+    <!-- Left Bat -->
+    <g transform="rotate(-35)">
+      <rect x="-14" y="-120" width="28" height="60" rx="8" fill="#FBBF24" />
+      <rect x="-18" y="-60" width="36" height="150" rx="6" fill="#D97706" />
+      <rect x="-12" y="-50" width="24" height="130" rx="4" fill="#FDE68A" opacity="0.6" />
+    </g>
+    <!-- Right Bat -->
+    <g transform="rotate(35)">
+      <rect x="-14" y="-120" width="28" height="60" rx="8" fill="#FBBF24" />
+      <rect x="-18" y="-60" width="36" height="150" rx="6" fill="#D97706" />
+      <rect x="-12" y="-50" width="24" height="130" rx="4" fill="#FDE68A" opacity="0.6" />
+    </g>
+  </g>
+
+  <!-- Cricket Ball -->
+  <circle cx="256" cy="245" r="76" fill="url(#ballGrad)" filter="drop-shadow(0 10px 15px rgba(0,0,0,0.5))" />
+  
+  <!-- Ball Seam -->
+  <path d="M 200 245 C 200 205, 312 205, 312 245 C 312 285, 200 285, 200 245" fill="none" stroke="#FFFFFF" stroke-width="4.5" stroke-dasharray="7 5" />
+  <path d="M 197 245 C 197 200, 315 200, 315 245 C 315 290, 197 290, 197 245" fill="none" stroke="#FEF08A" stroke-width="1.5" opacity="0.8" />
+
+  <!-- Golden Stars -->
+  <polygon points="256,75 262,92 280,92 265,103 271,120 256,109 241,120 247,103 232,92 250,92" fill="url(#goldGrad)" />
+  <polygon points="190,95 195,108 210,108 198,117 202,130 190,121 178,130 182,117 170,108 185,108" fill="url(#goldGrad)" opacity="0.8" />
+  <polygon points="322,95 327,108 342,108 330,117 334,130 322,121 310,130 314,117 302,108 317,108" fill="url(#goldGrad)" opacity="0.8" />
+
+  <!-- Academy Text Banner -->
+  <text x="256" y="375" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="44" font-weight="900" fill="#FFFFFF" letter-spacing="4">
+    SCA
+  </text>
+  <text x="256" y="415" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#F59E0B" letter-spacing="6">
+    CRICKET ACADEMY
+  </text>
+  <text x="256" y="445" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#94A3B8" letter-spacing="2">
+    EST. 2018 • EXCELLENCE IN CRICKET
+  </text>
+</svg>
