@@ -87,17 +87,19 @@ export default function App() {
           api.getNotificationSettings(),
         ]);
 
-      setCurrentUser(meRes.user);
-      setAllUsers(meRes.allUsers);
-      setBatches(batchesRes);
-      setStudents(studentsRes);
-      setStats(reportsRes);
-      setSheetsConfig(sheetsRes);
-      setNotifications(notifsRes);
-      setNotificationSettings(notifSettingsRes);
+      if (meRes?.user) {
+        setCurrentUser(meRes.user);
+        setAllUsers(meRes.allUsers || [meRes.user]);
+      }
+      if (batchesRes) setBatches(batchesRes);
+      if (studentsRes) setStudents(studentsRes);
+      if (reportsRes) setStats(reportsRes);
+      if (sheetsRes) setSheetsConfig(sheetsRes);
+      if (notifsRes) setNotifications(notifsRes);
+      if (notifSettingsRes) setNotificationSettings(notifSettingsRes);
 
       // Fees are strictly loaded only if Admin
-      if (meRes.user.role === 'admin') {
+      if (meRes?.user?.role === 'admin') {
         try {
           const feesRes = await api.getFees();
           setFees(feesRes);
@@ -108,9 +110,7 @@ export default function App() {
         setFees([]);
       }
     } catch (err: unknown) {
-      console.error('Failed to load academy data:', err);
-      const msg = err instanceof Error ? err.message : 'Network error loading data';
-      setGlobalError(msg);
+      console.warn('Non-fatal warning loading academy data:', err);
     } finally {
       setLoading(false);
     }

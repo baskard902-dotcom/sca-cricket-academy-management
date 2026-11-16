@@ -90,7 +90,14 @@
       "id": "SCA-124",
       "welcomeMessageStatus": "sent",
       "welcomeSentAt": "2026-11-16T02:57:40.395Z",
-      "welcomeEventId": "WELCOME-RETRY-SCA-124-1794797860395"
+      "welcomeEventId": "WELCOME-RETRY-SCA-124-1794797860395",
+      "notificationPreferences": {
+        "pushEnabled": true,
+        "whatsappEnabled": true,
+        "overdueAlerts": true,
+        "upcomingDueDateAlerts": true,
+        "attendanceAlerts": true
+      }
     },
     {
       "name": "Rohan Sharma",
@@ -110,7 +117,14 @@
       "id": "SCA-123",
       "welcomeMessageStatus": "sent",
       "welcomeSentAt": "2026-11-16T02:57:02.002Z",
-      "welcomeEventId": "WELCOME-RETRY-SCA-123-1794797822002"
+      "welcomeEventId": "WELCOME-RETRY-SCA-123-1794797822002",
+      "notificationPreferences": {
+        "pushEnabled": true,
+        "whatsappEnabled": true,
+        "overdueAlerts": true,
+        "upcomingDueDateAlerts": true,
+        "attendanceAlerts": true
+      }
     },
     {
       "name": "vikey",

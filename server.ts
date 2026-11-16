@@ -16,6 +16,14 @@ const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 
 app.use(express.json({ limit: '10mb' }));
 
+// Normalize incoming URL for Vercel serverless environment where /api prefix might be stripped
+app.use((req: Request, _res: Response, next: NextFunction) => {
+  if (req.url && !req.url.startsWith('/api') && !req.url.startsWith('/dist') && !req.url.startsWith('/assets') && !req.url.startsWith('/favicon')) {
+    req.url = '/api' + (req.url.startsWith('/') ? req.url : '/' + req.url);
+  }
+  next();
+});
+
 // Current active session (in-memory default: Coach Jagadeesh, can switch in UI)
 let currentUserId = 'USR-002'; // Default Coach Jagadeesh
 
