@@ -36,3 +36,5 @@ Thumbs.db
 data/google_drive_cloud/
 data/safety_backups/
 scratch/
+
+.vercel
